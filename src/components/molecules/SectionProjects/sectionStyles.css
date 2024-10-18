@@ -35,8 +35,10 @@
   border-radius: var(--border-radius-small);
 }
 
+/*Styles container projects */
 .section-projects > div.projects-content{
   display: flex;
+  flex-wrap: wrap;
   width: 100%;
   gap: var(--padding-medium);
 }

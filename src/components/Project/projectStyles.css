@@ -1,6 +1,7 @@
 .project {
   border-radius: var(--border-radius-small);
   height: auto;
+  flex-basis: calc((100% / 3) - var(--padding-medium));
   display: flex;
   flex-direction: column;
   background-color: var(--background-color-gray-light);
