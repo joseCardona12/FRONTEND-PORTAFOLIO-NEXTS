@@ -11,6 +11,7 @@ export async function putTitleSmallHomeViewService(
 ): Promise<IResponseHomeView> {
   const data = await fetchApi("http://localhost:4000/api/homeView", {
     method: "PATCH",
+    cache: "no-cache",
     headers: {
       "Content-Type": "application/json",
     },
