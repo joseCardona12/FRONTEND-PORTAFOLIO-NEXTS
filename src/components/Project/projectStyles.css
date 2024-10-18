@@ -14,6 +14,7 @@
 .project:hover{
   transform: scale(1.02);
   opacity: .8;
+  border: 1px solid var(--background-gray-light);
 }
 
 .project > div.project-header{
