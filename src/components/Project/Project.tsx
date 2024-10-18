@@ -8,8 +8,8 @@ interface IProjectProps {
 }
 export default function Project({ projects }: IProjectProps): React.ReactNode {
   const router = useRouter();
-  const limit:number = 4;
-  if (!projects) return null;
+  // const limit:number = 4;
+  if (!projects?.projects) return null;
 
   const handleClickRedirect = (id:number):void =>{
     router.push(`/projects/${id}`);
