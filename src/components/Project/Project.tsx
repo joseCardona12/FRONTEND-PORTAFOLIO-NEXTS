@@ -2,6 +2,8 @@
 import { IProject, IResponseProject } from "@/interfaces";
 import "./projectStyles.css";
 import { useRouter } from "next/navigation";
+import { FaFolderClosed } from "react-icons/fa6";
+
 
 interface IProjectProps {
   projects: IResponseProject | null;
@@ -20,12 +22,20 @@ export default function Project({ projects }: IProjectProps): React.ReactNode {
       ?
       projects.projects.map((project: IProject, index: number) => (
         <div className="project" key={index} onClick={()=>handleClickRedirect(project.id)}>
-          <img className="project-image" src={project.url_image} alt={`${project.name}${project.url_image}`} />
-          <div className="project-info">
-            <div className="">
-              <h3 className="project-title">{project.name}</h3>
-              <p className="project-description">{project.description}</p>
-            </div>
+          <div className="project-header">
+            <img className="header-image" src={project.url_image} alt={`${project.name}${project.url_image}`} />
+          </div>
+          <div className="project-body">
+            <h3 className="body-title">
+            <FaFolderClosed />
+            {project.name}
+            </h3>
+            <p className="body-description">{project.description}</p>
+          </div>
+          <div  className="project-footer">
+            <p>web design</p>
+            <p>web design</p>
+            <p>web design</p>
           </div>
         </div>
       ))

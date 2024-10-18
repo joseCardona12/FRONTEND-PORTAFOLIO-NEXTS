@@ -9,23 +9,7 @@
 }
 
 .section-projects > div.projects-content{
-  display: grid;
+  display: flex;
+  width: 100%;
   gap: var(--padding-medium);
-  grid-template-columns: repeat(3, 1fr);
-  width: 100%;
-}
-
-.section-projects > div.projects-content > *:nth-child(2)
-{
-  grid-column: span 2;
-  width: 100%;
-}
-
-.section-projects > div.projects-content > *:nth-child(4){
-  width: 100%;
-}
-
-.section-projects > div.projects-content > *:nth-child(6){
-  grid-column: span 2;
-  width: 100%;
 }
